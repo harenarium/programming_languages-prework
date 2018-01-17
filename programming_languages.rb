@@ -4,7 +4,7 @@ def reformat_languages(languages)
   languages.each { |style, style_hash|
     style_hash.each{ |lang, language_hash|
       new_hash[lang]={language_hash.keys[0] => language_hash.values[0], style: []}
-      new_hash[lang][style:] << style
+      new_hash[lang][:style] << style
     }
   }
   new_hash
