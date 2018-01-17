@@ -2,10 +2,9 @@ def reformat_languages(languages)
   # your code here
   new_hash ={}
   languages.each { |style, style_hash|
-    array = []
-    array << style
     style_hash.each{ |lang, language_hash|
-      new_hash[lang]={language_hash.keys[0] => language_hash.values[0], style: array}
+      new_hash[lang]={language_hash.keys[0] => language_hash.values[0], style: []}
+      new_hash[lang][style:] << style
     }
   }
   new_hash
